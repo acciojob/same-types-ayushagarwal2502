@@ -3,14 +3,14 @@ function isSameType(value1, value2) {
   let type2 = typeof value2;
 
   if(type1 === type2) {
-    return true;
+    return 'true';
   }
 
   if (Number.isNaN(value1) && Number.isNaN(value2)) {
-    return true;
+    return 'true';
   }
 
-  return false;
+  return 'false';
 }
 // do not change the code below.
 let value1 = prompt("Enter Start of the Range.");
