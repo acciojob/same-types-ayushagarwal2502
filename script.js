@@ -4,6 +4,11 @@ function isSameType(value1, value2) {
      return true;
    }
    
+   // Check if the values are strings
+   if (typeof value1 === 'string' || typeof value2 === 'string') {
+     return typeof value1 === typeof value2;
+   }
+   
    // Check if the values are numbers and convert them to number type
    if (!isNaN(value1)) {
      value1 = Number(value1);
@@ -13,14 +18,8 @@ function isSameType(value1, value2) {
    }
    
    // Compare the types of the values
-   if (typeof(value1) == typeof(value2)) {
-     return true;
-   }
-   else {
-     return false;
-   }
-}
-// do not change the code below.
+   return typeof(value1) == typeof(value2);
+}// do not change the code below.
 let value1 = prompt("Enter Start of the Range.");
 let value2 = prompt("Enter End Of the Range.");
 alert(isSameType(value1, value2));
