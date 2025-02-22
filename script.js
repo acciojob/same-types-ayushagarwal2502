@@ -1,9 +1,9 @@
 function isSameType(value1, value2) {
-  // Check if the values can be converted to numbers
-  if (!isNaN(value1)) {
+  // Check if the values are numbers in string format
+  if (!isNaN(value1) && /^-?\d+$/.test(value1)) {
     value1 = Number(value1);
   }
-  if (!isNaN(value2)) {
+  if (!isNaN(value2) && /^-?\d+$/.test(value2)) {
     value2 = Number(value2);
   }
 
